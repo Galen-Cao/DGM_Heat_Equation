@@ -209,12 +209,13 @@ if __name__ == "__main__":
     elif args.d == 2:
         x_steps = 200
     
-    visualise(
-        T=args.T,
-        n_steps=args.n_steps,
-        d=args.d,
-        hidden_dim=args.hidden_dim,
-        base_dir=results_path,
-        device=device,
-        x_steps=x_steps,
-    )
+    if args.d == 1 or args.d == 2:
+        visualise(
+            T=args.T,
+            n_steps=args.n_steps,
+            d=args.d,
+            hidden_dim=args.hidden_dim,
+            base_dir=results_path,
+            device=device,
+            x_steps=x_steps,
+        )
